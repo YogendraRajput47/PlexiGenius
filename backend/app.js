@@ -1,7 +1,7 @@
 // src/app.js
 const express = require("express");
 const cors = require("cors");
-const authRoutes = require("./routes/auth"); // we'll add these routes next
+const authRoutes = require("./routes/auth"); 
 const leadsRoutes = require("./routes/leads");
 const employeesRoutes = require("./routes/employees");
 const errorHandler = require("./middlewares/errorHandler");
@@ -11,8 +11,8 @@ const app = express();
 
 // middlewares
 app.use("/uploads", express.static(path.join(__dirname, "..", "uploads")));
-app.use(express.json()); // parse JSON bodies
-app.use(express.urlencoded({ extended: true })); // parse form bodies
+app.use(express.json()); 
+app.use(express.urlencoded({ extended: true }));
 const allowedOrigins = [
   "http://localhost:5173",
   "https://plexi-genius.vercel.app",
@@ -32,12 +32,14 @@ app.use(
   })
 );
 
-// routes (placeholders for now - files will be added soon)
 app.use("/api/auth", authRoutes);
 app.use("/api/leads", leadsRoutes);
 app.use("/api/employees", employeesRoutes);
 
-// global error handler
+app.get("/", (req, res) => {
+  res.send("Welcome to the PlexiGenius API");
+});
+
 app.use(errorHandler);
 
 module.exports = app;
