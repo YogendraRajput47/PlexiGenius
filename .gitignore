@@ -1,0 +1,67 @@
+# -----------------------
+# Node modules (server & client)
+# -----------------------
+node_modules/
+server/node_modules/
+client/node_modules/
+
+# -----------------------
+# Environment Files
+# -----------------------
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# -----------------------
+# Logs
+# -----------------------
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# -----------------------
+# Build Output (client)
+# -----------------------
+client/dist/
+client/build/
+
+# -----------------------
+# Build Output (server)
+# -----------------------
+server/dist/
+server/build/
+
+# -----------------------
+# OS generated files
+# -----------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------
+# IDE files
+# -----------------------
+.vscode/
+.idea/
+
+# -----------------------
+# Uploads (if storing locally — not needed if using Cloudinary)
+# -----------------------
+server/uploads/
+uploads/
+
+# -----------------------
+# Cache
+# -----------------------
+.cache/
+client/.vite/
+client/.next/
+
+# -----------------------
+# Misc
+# -----------------------
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
