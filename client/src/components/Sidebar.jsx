@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Icon = ({name, className='w-5 h-5'}) => {
   const icons = {
@@ -11,6 +11,12 @@ const Icon = ({name, className='w-5 h-5'}) => {
   };
   return icons[name] || null;
 };
+
+const navigate=useNavigate();
+const logoutHandler=()=>{
+  localStorage.removeItem('token');
+  navigate('/login');
+}
 
 const LinkItem = ({to, icon, label}) => (
   <NavLink
@@ -37,7 +43,7 @@ export default function Sidebar() {
         <LinkItem to="/" icon={Icon({name:'dashboard'})} label="Dashboard" />
         <LinkItem to="/leads" icon={Icon({name:'leads'})} label="Leads" />
         <LinkItem to="/employees" icon={Icon({name:'employee'})} label="Employee" />
-        <button onClick={() => { localStorage.removeItem('token'); window.location.href='/login'; }} className="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 mt-6 hover:bg-gray-50 w-full text-left">
+        <button onClick={logoutHandler} className="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 mt-6 hover:bg-gray-50 w-full text-left">
           <span className="text-lg">{Icon({name:'logout'})}</span>
           Logout
         </button>
