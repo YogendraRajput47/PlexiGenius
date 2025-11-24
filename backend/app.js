@@ -17,7 +17,7 @@ app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')));
 app.use(express.json()); // parse JSON bodies
 app.use(express.urlencoded({ extended: true })); // parse form bodies
 app.use(cors({
-  origin:  "https://plexi-genius.vercel.app",
+  origin: "https://plexigenius-6qyy.onrender.com",
   credentials: true
 }));
 

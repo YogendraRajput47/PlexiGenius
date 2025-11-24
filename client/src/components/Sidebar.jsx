@@ -12,11 +12,8 @@ const Icon = ({name, className='w-5 h-5'}) => {
   return icons[name] || null;
 };
 
-const navigate=useNavigate();
-const logoutHandler=()=>{
-  localStorage.removeItem('token');
-  navigate('/login');
-}
+
+
 
 const LinkItem = ({to, icon, label}) => (
   <NavLink
@@ -31,6 +28,12 @@ const LinkItem = ({to, icon, label}) => (
 );
 
 export default function Sidebar() {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    navigate('/login');
+  };
   return (
     <aside className="w-72 bg-white h-screen p-5 border-r border-gray-100">
       <button className="bg-accent text-white px-4 py-2 rounded-lg mb-6 w-full text-sm flex items-center justify-center gap-2">
@@ -43,7 +46,7 @@ export default function Sidebar() {
         <LinkItem to="/" icon={Icon({name:'dashboard'})} label="Dashboard" />
         <LinkItem to="/leads" icon={Icon({name:'leads'})} label="Leads" />
         <LinkItem to="/employees" icon={Icon({name:'employee'})} label="Employee" />
-        <button onClick={logoutHandler} className="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 mt-6 hover:bg-gray-50 w-full text-left">
+        <button onClick={handleLogout} className="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 mt-6 hover:bg-gray-50 w-full text-left">
           <span className="text-lg">{Icon({name:'logout'})}</span>
           Logout
         </button>
