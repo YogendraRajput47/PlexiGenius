@@ -23,6 +23,10 @@ app.use('/api/auth', authRoutes);
 app.use('/api/leads', leadsRoutes);
 app.use('/api/employees', employeesRoutes);
 
+app.get("/", (req, res) => {
+  res.send("PlexiGenius Backend is running");
+});
+
 // global error handler
 app.use(errorHandler);
 
