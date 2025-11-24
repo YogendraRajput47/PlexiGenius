@@ -37,7 +37,7 @@ app.use("/api/leads", leadsRoutes);
 app.use("/api/employees", employeesRoutes);
 
 app.get("/", (req, res) => {
-  res.send("Welcome to the PlexiGenius API");
+  res.send("PlexiGenius Backend is running");
 });
 
 app.use(errorHandler);
