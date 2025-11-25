@@ -22,8 +22,8 @@ export default function Topbar({ onSearch }) {
       </div>
 
       <div className="flex items-center gap-3 ml-4">
-        <div className="px-3 py-2 bg-gray-50 rounded text-sm text-gray-700">John Doe</div>
-        <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">JD</div>
+        <div className="px-3 py-2 bg-gray-50 rounded text-sm text-gray-700">Admin</div>
+        <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">AD</div>
       </div>
     </div>
   );
