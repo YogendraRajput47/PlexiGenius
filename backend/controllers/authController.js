@@ -17,6 +17,8 @@ exports.login = async (req, res) => {
       { expiresIn: "8h" }
     );
 
+    res.cookie("token", token, { httpOnly: true,expiresIn:30*24*60*60*1000 });
+
     res.json({
       message: "Login successful",
       token,
