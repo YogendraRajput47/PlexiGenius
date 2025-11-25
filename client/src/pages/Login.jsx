@@ -66,7 +66,7 @@ export default function Login() {
               value={form.password}
               onChange={handleChange}
               className="w-full border px-3 py-2 rounded-lg"
-              placeholder="••••••••"
+              placeholder="Enter your password"
             />
           </div>
 
