@@ -18,7 +18,7 @@ async function seedAdmin() {
   });
 
   await admin.save();
-  console.log("Admin created → username: admin | password: admin123");
+  console.log("Admin created  username: admin | password: admin123");
   process.exit(0);
 }
 
