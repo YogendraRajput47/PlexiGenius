@@ -254,7 +254,7 @@ export default function LeadModal({ lead = null, onClose, onSave }) {
           {/* Tag */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="text-sm text-gray-600 mb-1 block">Tag</label>
+              <label className="text-sm text-gray-600 mb-1 block">Position</label>
               <input
                 name="tags"
                 value={form.tags}
@@ -281,7 +281,7 @@ export default function LeadModal({ lead = null, onClose, onSave }) {
 
           {/* Employee */}
           <div>
-            <label className="text-sm text-gray-600 mb-1 block">Employee</label>
+            <label className="text-sm text-gray-600 mb-1 block">No of leads</label>
             <select
               name="assignedTo"
               value={form.assignedTo}
