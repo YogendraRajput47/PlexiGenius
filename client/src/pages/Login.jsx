@@ -76,7 +76,7 @@ export default function Login() {
             id="login-button"
             type="submit"
             disabled={loading}
-            className="w-full bg-red-600 text-white py-2 rounded-lg mt-2 disabled:opacity-60"
+            className="w-full bg-accent text-white py-2 rounded-lg mt-2 disabled:opacity-60"
           >
             {loading ? 'Logging in...' : 'Login'}
           </button>
