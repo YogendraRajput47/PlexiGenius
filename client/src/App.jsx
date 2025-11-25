@@ -15,7 +15,6 @@ function App(){
         <Route path="/leads" element={<ProtectedRoute><Leads/></ProtectedRoute>} />
         <Route path="/employees" element={<ProtectedRoute><Employees/></ProtectedRoute>} />
         <Route path="/leads/:id" element={<ProtectedRoute><LeadDetail/></ProtectedRoute>} />
-        {/* add /leads and /employees pages later */}
       </Routes>
     </AuthProvider>
   );
